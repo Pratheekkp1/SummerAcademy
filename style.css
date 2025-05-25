@@ -1,4 +1,4 @@
-/* Custom styles for Radiant Stars Academy */
+/* Custom styles for Radiant Stars Academy - Child-Friendly Palette */
 
 /* Base body styles, font-family and smooth scrolling */
 body {
@@ -18,16 +18,16 @@ h6 {
 
 /* Hero section background pattern */
 .hero-pattern {
-    background-color: #0f172a;
-    background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
-        radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+    background-color: #38bdf8; /* sky-400 */
+    background-image: radial-gradient(circle at 25px 25px, rgba(250, 204, 21, 0.2) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(236, 72, 153, 0.17) 2%, transparent 0%);
     background-size: 100px 100px;
 }
 
 /* Program card hover effect */
 .program-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(56, 189, 248, 0.16), 0 10px 10px -5px rgba(250, 204, 21, 0.06);
 }
 
 /* Star icon styling (if used directly, not via Font Awesome) */
@@ -50,7 +50,7 @@ h6 {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #f59e0b; /* Amber-500 */
+    background-color: #facc15; /* yellow-400 */
     transition: width 0.3s ease;
 }
 
@@ -74,7 +74,7 @@ h6 {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.13), 0 4px 6px -2px rgba(250, 204, 21, 0.07);
 }
 
 /* Program icon hover effect within program cards */
