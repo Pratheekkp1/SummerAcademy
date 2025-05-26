@@ -49,35 +49,59 @@ document.addEventListener('DOMContentLoaded', function () {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent default form submission
 
-            // In a real application, you would send this data to a server
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
+            const program = document.getElementById('program-interest').value;
             const message = document.getElementById('message').value;
 
-            console.log('Form Submitted!');
-            console.log('Name:', name);
-            console.log('Email:', email);
-            console.log('Phone:', phone);
-            console.log('Message:', message);
-
-            // Display a success message to the user (instead of alert)
             const submitButton = contactForm.querySelector('button[type="submit"]');
             if (submitButton) {
-                submitButton.textContent = 'Message Sent!';
-                submitButton.classList.remove('bg-indigo-900', 'hover:bg-indigo-800');
-                submitButton.classList.add('bg-green-500', 'cursor-not-allowed');
-                submitButton.disabled = true; // Disable button after submission
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+            }
 
-                // Optionally, reset the form after a short delay
+            // Send form data to Google Sheets via Apps Script Web App
+            fetch('https://script.google.com/macros/s/AKfycbxLhuJwMidoQ3SLUo5kj7Tk5PL0Ska_bpWabCGtbyWMPQhK0ZKAmFtHMAzQxbH1ycCeGQ/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    phone,
+                    program,
+                    message
+                })
+            })
+            .then(() => {
+                if (submitButton) {
+                    submitButton.textContent = 'Message Sent!';
+                    submitButton.classList.remove('bg-sky-400', 'hover:bg-pink-400');
+                    submitButton.classList.add('bg-green-500', 'cursor-not-allowed');
+                }
+
+                // Reset the form after a short delay
                 setTimeout(() => {
                     contactForm.reset();
+                    if (submitButton) {
+                        submitButton.textContent = 'Send Message';
+                        submitButton.classList.remove('bg-green-500', 'cursor-not-allowed');
+                        submitButton.classList.add('bg-sky-400', 'hover:bg-pink-400');
+                        submitButton.disabled = false;
+                    }
+                }, 3000);
+            })
+            .catch((error) => {
+                console.error('Error submitting form:', error);
+                alert("There was an error submitting the form.");
+                if (submitButton) {
                     submitButton.textContent = 'Send Message';
-                    submitButton.classList.remove('bg-green-500', 'cursor-not-allowed');
-                    submitButton.classList.add('bg-indigo-900', 'hover:bg-indigo-800');
                     submitButton.disabled = false;
-                }, 3000); // Reset after 3 seconds
-            }
+                }
+            });
         });
     }
 });
