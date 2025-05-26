@@ -46,7 +46,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Home</a>
                     <a href="#about" class="nav-link text-pink-600 hover:text-yellow-400 font-medium">About Us</a>
-                    <a href="programs.html" class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Programs</a>
+                    <a href="#programs" class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Programs</a>
                     <a href="#testimonials"
                         class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Testimonials</a>
                     <a href="#contact" class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Contact</a>
@@ -87,8 +87,7 @@
             <div class="flex flex-col space-y-4">
                 <a href="#home" class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Home</a>
                 <a href="#about" class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">About Us</a>
-                <a href="programs.html"
-                    class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Programs</a>
+                <a href="#programs" class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Programs</a>
                 <a href="#testimonials"
                     class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Testimonials</a>
                 <a href="#contact" class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Contact</a>
@@ -109,7 +108,7 @@
                     </p>
                     <div
                         class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="programs.html"
+                        <a href="#programs"
                             class="cta-button bg-green-400 hover:bg-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg">
                             Explore Programs
                         </a>
@@ -281,7 +280,6 @@
                         <li>Summer Camp</li>
                     </ul>
                     <div class="mt-6">
-                        <a href="programs.html" class="inline-block bg-white/80 hover:bg-yellow-400 text-sky-700 font-semibold px-5 py-2 rounded-full shadow transition duration-300">Learn More</a>
                     </div>
                 </div>
 
@@ -303,7 +301,6 @@
                         <li>Critical Thinking Skills</li>
                     </ul>
                     <div class="mt-6">
-                        <a href="programs.html" class="inline-block bg-white/80 hover:bg-green-400 text-yellow-900 font-semibold px-5 py-2 rounded-full shadow transition duration-300">Learn More</a>
                     </div>
                 </div>
 
@@ -325,11 +322,11 @@
                         <li>Tutoring Services</li>
                     </ul>
                     <div class="mt-6">
-                        <a href="programs.html" class="inline-block bg-white/80 hover:bg-pink-400 text-pink-900 font-semibold px-5 py-2 rounded-full shadow transition duration-300">Learn More</a>
                     </div>
                 </div>
             </div>
     </section>
+
 
     <section id="contact" class="py-16 md:py-24 bg-yellow-50">
         <div class="container mx-auto px-4">
@@ -360,10 +357,9 @@
                                 placeholder="Enter your phone number">
                         </div>
                         <div class="mb-6">
-                            <label for="program-interest" class="block text-pink-600 font-medium mb-2">Program of Interest</label>
-                            <select id="program-interest"
-                                class="w-full px-4 py-3 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                                <option value="">Select a Program</option>
+                            <label for="""program-interest" class="block text-pink-600 font-medium mb-2">Program of Interest</label>
+                            <select id="program-interest" name="program-interest" multiple
+                                class="w-full px-4 py-3 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 h-40">
                                 <option value="math">Math</option>
                                 <option value="science">Science</option>
                                 <option value="english">English</option>
@@ -373,6 +369,7 @@
                                 <option value="youth-leadership">Youth Leadership Programs</option>
                                 <option value="general-inquiry">General Inquiry</option>
                             </select>
+                            <p class="text-xs text-green-700 mt-2">Hold down the Command (⌘) key on Mac or Ctrl key on Windows to select multiple options.</p>
                         </div>
                         <div class="mb-6">
                             <label for="message" class="block text-pink-600 font-medium mb-2">Message</label>
@@ -432,8 +429,8 @@
                                 <div>
                                     <h4 class="text-lg font-semibold text-pink-600 mb-1">Office Hours</h4>
                                     <ul class="text-green-700 space-y-1">
-                                        <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
-                                        <li>Saturday: 9:00 AM - 1:00 PM</li>
+                                        <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
+                                        <li>Saturday: Closed</li>
                                         <li>Sunday: Closed</li>
                                     </ul>
                                 </div>
@@ -470,7 +467,7 @@
                         <ul class="space-y-2">
                             <li><a href="#home" class="hover:text-yellow-200 transition duration-300">Home</a></li>
                             <li><a href="#about" class="hover:text-yellow-200 transition duration-300">About Us</a></li>
-                            <li><a href="programs.html" class="hover:text-yellow-200 transition duration-300">Programs</a></li>
+                            <li><a href="#programs" class="hover:text-yellow-200 transition duration-300">Programs</a></li>
                             <li><a href="#testimonials" class="hover:text-yellow-200 transition duration-300">Testimonials</a></li>
                             <li><a href="#contact" class="hover:text-yellow-200 transition duration-300">Contact</a></li>
                         </ul>
@@ -496,8 +493,8 @@
                             </a>
                         </div>
                         <div>
-                            <p class="text-white/80">Email: <a href="mailto:info@radianstars.edu" class="underline hover:text-yellow-100">info@radianstars.edu</a></p>
-                            <p class="text-white/80">Phone: <a href="tel:5551234567" class="underline hover:text-yellow-100">(555) 123-4567</a></p>
+                            <p class="text-white/80">Email: <a href="mailto: radiantstars101@gmail.com" class="underline hover:text-yellow-100">info@radianstars.edu</a></p>
+                            <p class="text-white/80">Phone: <a href="tel: (703) 651-6975" class="underline hover:text-yellow-100">(555) 123-4567</a></p>
                         </div>
                     </div>
                 </div>
