@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radiant Stars Academy | Educate, Enrich, Empower</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        // You can customize your dark mode colors here
+                    }
+                }
+            }
+        }
+    </script>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -13,7 +25,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-emerald-50">
+<body class="bg-emerald-50 dark:bg-gray-900">
     <div id="announcement-banner" class="bg-yellow-400 text-white text-center py-2 px-4 relative z-50 flex justify-center items-center">
         <p class="text-sm md:text-base font-medium">
             Exciting News! Enrollments for our Summer Programs are now open!
@@ -26,7 +38,7 @@
         </button>
     </div>
 
-    <nav class="bg-yellow-50 shadow-md w-full z-50">
+    <nav class="bg-yellow-50 dark:bg-gray-800 shadow-md w-full z-50">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
@@ -38,7 +50,7 @@
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-pink-600">Radiant Stars Academy</h1>
+                        <h1 class="text-xl font-bold text-pink-600 dark:text-pink-400">Radiant Stars Academy</h1>
                         <p class="text-xs text-yellow-400 font-medium -mt-1">Educate, Enrich, Empower</p>
                     </div>
                 </div>
@@ -50,6 +62,15 @@
                     <!-- <a href="#testimonials"
                         class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Testimonials</a> -->
                     <a href="#contact" class="nav-link text-pink-600 hover:text-yellow-400 font-medium">Contact</a>
+                    <!-- Add Dark Mode Toggle Button -->
+                    <button id="dark-mode-toggle" class="text-pink-600 hover:text-yellow-400 focus:outline-none">
+                        <svg id="dark-mode-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg id="light-mode-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
 
                 <div class="md:hidden">
@@ -74,7 +95,7 @@
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-lg font-bold text-pink-600">Radiant Stars</h1>
+                        <h1 class="text-lg font-bold text-pink-600 dark:text-pink-400">Radiant Stars</h1>
                     </div>
                 </div>
                 <button id="close-menu" class="text-green-700 hover:text-pink-600">
@@ -91,6 +112,13 @@
                 <a href="#testimonials"
                     class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Testimonials</a>
                 <a href="#contact" class="text-pink-600 hover:text-yellow-400 font-medium py-2 mobile-link">Contact</a>
+                <!-- Add Dark Mode Toggle Button for Mobile -->
+                <button id="dark-mode-toggle-mobile" class="text-pink-600 hover:text-yellow-400 focus:outline-none py-2 flex items-center">
+                    <span class="mr-2">Toggle Dark Mode</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
@@ -126,7 +154,7 @@
             <div class="flex flex-col items-center text-center">
                 <span class="text-3xl mb-3">🌟</span>
                 <p class="text-lg italic text-green-900 mb-2">
-                    “This camp helped my son build confidence and make friends. Originally very shy, he's now much more social in school.”
+                    "This camp helped my son build confidence and make friends. Originally very shy, he's now much more social in school."
                 </p>
                 <span class="mt-2 text-sm text-sky-700 font-semibold">— Michael K., Parent</span>
             </div>
@@ -135,7 +163,7 @@
             <div class="flex flex-col items-center text-center">
                 <span class="text-3xl mb-3">❤️</span>
                 <p class="text-lg italic text-green-900 mb-2">
-                    “The counselors were amazing. They made every kid feel welcome, and the values they teach—kindness, teamwork, curiosity—really stick with the kids.”
+                    "The counselors were amazing. They made every kid feel welcome, and the values they teach—kindness, teamwork, curiosity—really stick with the kids."
                 </p>
                 <span class="mt-2 text-sm text-sky-700 font-semibold">— Tanya G., Parent</span>
             </div>
@@ -144,7 +172,7 @@
             <div class="flex flex-col items-center text-center">
                 <span class="text-3xl mb-3">💛</span>
                 <p class="text-lg italic text-green-900 mb-2">
-                    “My daughter came home each day smiling and couldn’t stop talking about the fun she had. She’s already counting down the days to next summer!”
+                    "My daughter came home each day smiling and couldn't stop talking about the fun she had. She's already counting down the days to next summer!"
                 </p>
                 <span class="mt-2 text-sm text-sky-700 font-semibold">— Jessica R., Parent</span>
             </div>
@@ -153,7 +181,7 @@
             <div class="flex flex-col items-center text-center">
                 <span class="text-3xl mb-3">🎉</span>
                 <p class="text-lg italic text-green-900 mb-2">
-                    “The variety of activities kept my kids engaged and excited every day. They learned so much and made memories that will last a lifetime.”
+                    "The variety of activities kept my kids engaged and excited every day. They learned so much and made memories that will last a lifetime."
                 </p>
                 <span class="mt-2 text-sm text-sky-700 font-semibold">— Priya S., Parent</span>
             </div>
@@ -504,7 +532,7 @@
                             </a>
                             <a href="#contact" class="bg-white/10 hover:bg-yellow-400 text-white p-2 rounded-full transition duration-300">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259 0-3.667-.014-4.947-.072-4.358-.2-6.78-2.618-6.98-1.281-.059-1.689-.073-4.948-.073z"></path>
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.668-.069 4.948-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259 0-3.667-.014-4.947-.072-4.358-.2-6.78-2.618-6.98-1.281-.059-1.689-.073-4.948-.073z"></path>
                                 </svg>
                             </a>
                             </div>
@@ -574,6 +602,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showSlide(0);
 });
+</script>
+
+<script>
+// Dark mode functionality
+function initDarkMode() {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const darkModeToggleMobile = document.getElementById('dark-mode-toggle-mobile');
+    const darkModeIcon = document.getElementById('dark-mode-icon');
+    const lightModeIcon = document.getElementById('light-mode-icon');
+    const html = document.documentElement;
+
+    // Check for saved user preference, if any, on load of the website
+    const darkModePreference = localStorage.getItem('darkMode') === 'true';
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('darkMode', isDark);
+        darkModeIcon.classList.toggle('hidden', !isDark);
+        lightModeIcon.classList.toggle('hidden', isDark);
+    }
+
+    // Set initial dark mode state
+    if (darkModePreference) {
+        html.classList.add('dark');
+        darkModeIcon.classList.remove('hidden');
+        lightModeIcon.classList.add('hidden');
+    }
+
+    // Add event listeners
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+    darkModeToggleMobile.addEventListener('click', toggleDarkMode);
+}
+
+// Initialize dark mode
+initDarkMode();
 </script>
 
 </body>
